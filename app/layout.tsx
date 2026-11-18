@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { CartProvider } from '@/context/CartContext';
 import Header from '@/components/Header';
@@ -38,6 +39,10 @@ export default function RootLayout({
           <main className="relative overflow-hidden">{children}</main>
           <Footer />
         </CartProvider>
+        <Script
+          src="https://www.noupe.com/embed/01a1efbe6210700083a3493627e74dd27376.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
